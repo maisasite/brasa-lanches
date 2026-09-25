@@ -1,0 +1,657 @@
+/* =========================
+   CONFIGURAÇÕES GERAIS
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #111111;
+  color: #ffffff;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  width: min(1120px, 90%);
+  margin: auto;
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(15, 15, 15, 0.97);
+  border-bottom: 1px solid #292929;
+}
+
+.nav-container {
+  min-height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.logo span {
+  color: #ffb000;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav a {
+  font-size: 14px;
+  font-weight: 700;
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  color: #ffb000;
+}
+
+.btn-whatsapp {
+  background: #25d366;
+  color: #08180e;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-weight: 800;
+  transition: 0.3s;
+}
+
+.btn-whatsapp:hover {
+  transform: translateY(-2px);
+  filter: brightness(1.08);
+}
+
+.menu-toggle {
+  display: none;
+  background: transparent;
+  color: white;
+  border: 0;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 720px;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  background:
+    linear-gradient(
+      rgba(0, 0, 0, 0.50),
+      rgba(0, 0, 0, 0.85)
+    ),
+    url("https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1600&q=85")
+    center/cover no-repeat;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 750px;
+}
+
+.hero-label {
+  display: inline-block;
+  color: #ffb000;
+  font-size: 14px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+  margin-bottom: 20px;
+}
+
+.hero h1 {
+  font-size: clamp(48px, 7vw, 88px);
+  line-height: 0.98;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.hero h1 span {
+  color: #ffb000;
+  display: block;
+}
+
+.hero p {
+  max-width: 620px;
+  font-size: 19px;
+  color: #dddddd;
+  margin-bottom: 32px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.btn-primary,
+.btn-secondary {
+  padding: 15px 24px;
+  border-radius: 8px;
+  font-weight: 900;
+  transition: 0.3s;
+}
+
+.btn-primary {
+  background: #ffb000;
+  color: #111111;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+}
+
+.btn-secondary {
+  border: 2px solid #ffffff;
+}
+
+.btn-secondary:hover {
+  background: #ffffff;
+  color: #111111;
+}
+
+
+/* =========================
+   CARDÁPIO
+========================= */
+
+.menu-section {
+  background: #f5f2ea;
+  color: #161616;
+  padding: 100px 0;
+}
+
+.section-heading {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.section-heading span {
+  color: #d86b00;
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.section-heading h2 {
+  font-size: clamp(34px, 5vw, 52px);
+  margin: 8px 0;
+}
+
+.section-heading p {
+  color: #666666;
+}
+
+.menu-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.food-card {
+  background: #ffffff;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transition: 0.3s;
+}
+
+.food-card:hover {
+  transform: translateY(-7px);
+}
+
+.food-image {
+  height: 230px;
+  position: relative;
+  background-position: center;
+  background-size: cover;
+}
+
+.food-tag {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  background: #ffb000;
+  color: #111111;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.food-content {
+  padding: 23px;
+}
+
+.food-content h3 {
+  font-size: 24px;
+  margin-bottom: 8px;
+}
+
+.food-content p {
+  min-height: 76px;
+  color: #666666;
+  font-size: 14px;
+}
+
+.food-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.food-bottom strong {
+  font-size: 21px;
+}
+
+.food-bottom a {
+  background: #111111;
+  color: #ffffff;
+  padding: 10px 13px;
+  border-radius: 7px;
+  font-size: 13px;
+  font-weight: 800;
+  transition: 0.3s;
+}
+
+.food-bottom a:hover {
+  background: #25d366;
+  color: #08180e;
+}
+
+
+/* =========================
+   IMAGENS DOS LANCHES
+========================= */
+
+.x-salada {
+  background-image:
+    url("https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=800&q=80");
+}
+
+.x-bacon {
+  background-image:
+    url("https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=800&q=80");
+}
+
+.x-tudo {
+  background-image:
+    url("https://images.unsplash.com/photo-1571091718767-18b5b1457add?auto=format&fit=crop&w=800&q=80");
+}
+
+.hot-dog {
+  background-image:
+    url("https://images.unsplash.com/photo-1612392062631-94dd858cba88?auto=format&fit=crop&w=800&q=80");
+}
+
+.duplo-bacon {
+  background-image:
+    url("https://images.unsplash.com/photo-1594212699903-ec8a3eca50f5?auto=format&fit=crop&w=800&q=80");
+}
+
+.batata {
+  background-image:
+    url("https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=800&q=80");
+}
+
+
+/* =========================
+   COMBOS
+========================= */
+
+.combos {
+  padding: 100px 0;
+  background: #171717;
+}
+
+.section-heading.light h2 {
+  color: #ffffff;
+}
+
+.combo-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.combo-card {
+  padding: 35px;
+  border: 1px solid #343434;
+  border-radius: 16px;
+  background: #202020;
+  transition: 0.3s;
+}
+
+.combo-card:hover {
+  transform: translateY(-6px);
+  border-color: #ffb000;
+}
+
+.combo-card.featured {
+  border: 2px solid #ffb000;
+}
+
+.combo-card > span {
+  color: #ffb000;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.combo-card h3 {
+  font-size: 25px;
+  line-height: 1.2;
+  margin: 15px 0;
+}
+
+.combo-card p {
+  color: #bdbdbd;
+  margin-bottom: 25px;
+}
+
+.combo-card strong {
+  display: block;
+  color: #ffb000;
+  font-size: 27px;
+  margin-bottom: 20px;
+}
+
+.combo-card a {
+  display: inline-block;
+  background: #ffb000;
+  color: #111111;
+  padding: 11px 17px;
+  border-radius: 7px;
+  font-weight: 900;
+}
+
+
+/* =========================
+   SOBRE
+========================= */
+
+.about {
+  padding: 100px 0;
+  background: #ffb000;
+  color: #111111;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 0.8fr;
+  gap: 70px;
+  align-items: center;
+}
+
+.about-content > span {
+  font-size: 13px;
+  font-weight: 900;
+  letter-spacing: 2px;
+}
+
+.about-content h2 {
+  font-size: clamp(38px, 5vw, 58px);
+  line-height: 1;
+  margin: 15px 0 25px;
+}
+
+.about-content p {
+  max-width: 650px;
+  margin-bottom: 15px;
+}
+
+.about-highlight {
+  background: #111111;
+  color: #ffffff;
+  padding: 45px;
+  border-radius: 18px;
+}
+
+.about-highlight strong {
+  font-size: 50px;
+}
+
+.about-highlight h3 {
+  font-size: 27px;
+  margin: 12px 0;
+}
+
+.about-highlight p {
+  color: #cccccc;
+}
+
+
+/* =========================
+   CONTATO
+========================= */
+
+.contact {
+  padding: 110px 0;
+  background: #101010;
+  text-align: center;
+}
+
+.contact-content span {
+  color: #25d366;
+  font-weight: 900;
+  letter-spacing: 1px;
+}
+
+.contact h2 {
+  font-size: clamp(40px, 6vw, 65px);
+  margin: 10px 0;
+}
+
+.contact p {
+  color: #bbbbbb;
+  margin-bottom: 30px;
+}
+
+.big-whatsapp {
+  display: inline-block;
+  background: #25d366;
+  color: #08180e;
+  padding: 17px 27px;
+  border-radius: 10px;
+  font-size: 17px;
+  font-weight: 900;
+  transition: 0.3s;
+}
+
+.big-whatsapp:hover {
+  transform: scale(1.04);
+}
+
+
+/* =========================
+   RODAPÉ
+========================= */
+
+.footer {
+  padding: 50px 0;
+  background: #080808;
+  border-top: 1px solid #252525;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
+.footer h2 {
+  font-size: 22px;
+}
+
+.footer h2 span {
+  color: #ffb000;
+}
+
+.footer p {
+  color: #888888;
+  font-size: 13px;
+  margin-top: 5px;
+}
+
+
+/* =========================
+   WHATSAPP FLUTUANTE
+========================= */
+
+.floating-whatsapp {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 999;
+
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #25d366;
+  border-radius: 50%;
+
+  font-size: 27px;
+
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.35);
+
+  transition: 0.3s;
+}
+
+.floating-whatsapp:hover {
+  transform: scale(1.1);
+}
+
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media (max-width: 900px) {
+
+  .menu-grid,
+  .combo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nav {
+    position: absolute;
+    top: 78px;
+    left: 0;
+    right: 0;
+
+    display: none;
+    flex-direction: column;
+
+    background: #111111;
+
+    padding: 30px;
+    border-top: 1px solid #292929;
+  }
+
+  .nav.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-container > .btn-whatsapp {
+    display: none;
+  }
+}
+
+
+@media (max-width: 600px) {
+
+  .hero {
+    min-height: 650px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .menu-section,
+  .combos,
+  .about,
+  .contact {
+    padding: 75px 0;
+  }
+
+  .menu-grid,
+  .combo-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .food-image {
+    height: 250px;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .floating-whatsapp {
+    width: 55px;
+    height: 55px;
+    right: 16px;
+    bottom: 16px;
+  }
+}
